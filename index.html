@@ -23,7 +23,27 @@
 <script src="script.js"></script>
 <script>
     $(document).ready(function() {
-        $(".title").addClass("animate__animated animate__shakeX");
+        function shakeBtn() {
+            $(".title").addClass("animate__animated animate__shakeX");
+
+            setTimeout(function() {
+                $(".title").removeClass("animate__animated animate__shakeX");
+            }, 350);
+        }
+        
+        setInterval(shakeBtn, 3000);
+
+        function scaleButton() {
+            $("#show-more-btn").css("transform", "scale(1.1)");
+
+            // Reset back to original size after the scale effect
+            setTimeout(function() {
+                $("#show-more-btn").css("transform", "scale(1)");
+            }, 500); // Reset after 0.5s (same as the CSS transition time)
+        }
+
+        // Repeat the scale effect every 5 seconds
+        setInterval(scaleButton, 1500);
     });
 </script>
 </body>

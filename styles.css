@@ -89,9 +89,17 @@ button i {
 
 #search-result img {
     width: 100%;
-    height: 230px;
+    height: 310px;
     object-fit: cover;
     border-radius: 1px;
+}
+
+#show-more-btn {
+    transition: transform 0.5s ease;
+}
+
+#show-more-btn:hover {
+    color: #000000;
 }
 
 
